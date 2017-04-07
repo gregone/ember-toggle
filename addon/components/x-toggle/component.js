@@ -79,10 +79,6 @@ const xToggle = Ember.Component.extend({
     return 'x-toggle-' + theme;
   }),
 
-  forId: computed(function () {
-    return this.get('elementId') + '-x-toggle';
-  }),
-
   click(e) {
     this.send('onClick', e);
   },
