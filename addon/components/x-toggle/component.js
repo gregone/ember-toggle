@@ -83,6 +83,10 @@ const xToggle = Ember.Component.extend({
     return this.get('elementId') + '-x-toggle';
   }),
 
+  click(e) {
+    this.send('onClick', e);
+  },
+
   actions: {
     onClick(e) {
       const { value, _offValue, _onValue } = this.getProperties('value', '_offValue', '_onValue');
